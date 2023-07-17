@@ -258,7 +258,7 @@ function openSpoiler(el){
 }
 
 function closeSpoiler(el){
-	el.nextElementSibling.style.maxHeight = '0px';
+	el.nextElementSibling.style = '';
 	el.classList.remove('active');
 }
 
