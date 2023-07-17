@@ -96,7 +96,7 @@ new Swiper('.doctors__slider', {
 new Swiper('.videos__slider', {
 	loop: true,
 	watchOverflow: true,
-	autoHeight: true,
+	autoHeight: false,
 	pagination: {
 		el: '.videos__slider-pagination',
 		clickable: true,
