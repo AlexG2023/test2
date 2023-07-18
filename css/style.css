@@ -317,26 +317,31 @@ cite {
   width: 100%;
 }
 .input_1 textarea::-webkit-input-placeholder, .input_1 input::-webkit-input-placeholder {
+  font-size: 14px;
   color: #231F20;
   line-height: 130%;
   font-weight: 300;
 }
 .input_1 textarea::-moz-placeholder, .input_1 input::-moz-placeholder {
+  font-size: 14px;
   color: #231F20;
   line-height: 130%;
   font-weight: 300;
 }
 .input_1 textarea:-ms-input-placeholder, .input_1 input:-ms-input-placeholder {
+  font-size: 14px;
   color: #231F20;
   line-height: 130%;
   font-weight: 300;
 }
 .input_1 textarea::-ms-input-placeholder, .input_1 input::-ms-input-placeholder {
+  font-size: 14px;
   color: #231F20;
   line-height: 130%;
   font-weight: 300;
 }
 .input_1 textarea::placeholder, .input_1 input::placeholder {
+  font-size: 14px;
   color: #231F20;
   line-height: 130%;
   font-weight: 300;
@@ -1767,7 +1772,7 @@ cite {
     margin-bottom: 22px;
   }
   .rewiews__write .for__form-input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .rewiews__write .for__form-input_ta {
     max-width: 260px;
@@ -1776,6 +1781,10 @@ cite {
   .rewiews__write .write__container {
     padding-bottom: 40px;
   }
+}
+.rewiews__write .write__container {
+  -ms-grid-columns: minmax(auto, 243px) minmax(auto, 560px) minmax(auto, 260px);
+  grid-template-columns: minmax(auto, 243px) minmax(auto, 560px) minmax(auto, 260px);
 }
 
 .write {
@@ -1793,6 +1802,9 @@ cite {
   .write {
     padding-top: 135px;
   }
+}
+.write .for__form-agreement {
+  color: rgba(119, 119, 119, 0.6);
 }
 .write__top {
   border-radius: 3px;
@@ -1817,6 +1829,10 @@ cite {
   background: #FFF;
   padding: 0 20px 30px;
 }
+.write__form .btn_1 {
+  font-size: 14px;
+  padding: 6px 40px 7px;
+}
 .write__img {
   width: 100%;
 }
@@ -1824,13 +1840,6 @@ cite {
   width: 100%;
 }
 @media (min-width: 767px) {
-  .write__container {
-    padding: 30px 0 30px 20px;
-    border-radius: 3px;
-    background: #FFF;
-    display: -ms-grid;
-    display: grid;
-  }
   .write__container {
     padding: 30px 0 30px 20px;
     border-radius: 3px;
@@ -1896,7 +1905,18 @@ cite {
   }
 }
 @media (min-width: 991px) {
+  .write .for__form-input {
+    padding-top: 10px;
+  }
+  .write .for__form-input_ta {
+    padding-top: 0;
+  }
+  .write .for__form-agreement {
+    color: rgba(35, 31, 32, 0.6);
+    font-size: 13px;
+  }
   .write__top {
+    padding: 0 40px 0 0;
     margin: 0;
   }
   .write__container {
@@ -1904,8 +1924,8 @@ cite {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-grid-columns: minmax(auto, 260px) minmax(auto, 560px) minmax(auto, 260px);
-    grid-template-columns: minmax(auto, 260px) minmax(auto, 560px) minmax(auto, 260px);
+    -ms-grid-columns: minmax(auto, 238px) minmax(auto, 560px) minmax(auto, 260px);
+    grid-template-columns: minmax(auto, 238px) minmax(auto, 560px) minmax(auto, 260px);
   }
   .write__img {
     margin-top: -64px;
