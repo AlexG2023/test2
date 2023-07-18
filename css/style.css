@@ -1611,9 +1611,6 @@ cite {
   }
 }
 @media (min-width: 991px) {
-  .for__form-input_ta {
-    display: none;
-  }
   .for__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1765,6 +1762,22 @@ cite {
   }
 }
 
+@media (min-width: 991px) {
+  .rewiews__write .for__form-agreement {
+    margin-bottom: 22px;
+  }
+  .rewiews__write .for__form-input {
+    margin-bottom: 10px;
+  }
+  .rewiews__write .for__form-input_ta {
+    max-width: 260px;
+    margin-bottom: 20px;
+  }
+  .rewiews__write .write__container {
+    padding-bottom: 40px;
+  }
+}
+
 .write {
   background: -webkit-gradient(linear, left bottom, left top, from(#F1EAE0), to(#F1EAE0));
   background: linear-gradient(0deg, #F1EAE0 0%, #F1EAE0 100%);
@@ -1901,6 +1914,10 @@ cite {
         -ms-grid-row-align: start;
         align-self: start;
   }
+  .write__form .btn_1 {
+    width: 100%;
+    max-width: 260px;
+  }
   .write__container > .rewiews__top, .write__container > .doctors__top, .write__container > .videos__top, .write__container > .programs__top, .write__container > .advatages__top, .write__container > .clinic__top, .write__container > .license__top {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -1919,6 +1936,7 @@ cite {
     -ms-grid-column: 3;
   }
 }
+
 .premium {
   padding: 0 0 60px;
 }
