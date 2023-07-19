@@ -65,7 +65,6 @@ new Swiper('.include__slider', {
 new Swiper('.doctors__slider', {
 	loop: true,
 	watchOverflow: false,
-	autoHeight: true,
 	pagination: {
 		el: '.doctors__slider-pagination',
 		clickable: true,
