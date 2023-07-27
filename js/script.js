@@ -222,7 +222,11 @@ new Swiper('.license__slider', {
 
 const $ = document.querySelector.bind(document),
 $$ = document.querySelectorAll.bind(document),
-body = $('body');
+body = $('body'),
+block = $('.header__block'),
+room = $('.header__room'),
+tel = $('.header__tel'),
+search = $('.header__search');
 
 body.addEventListener("click", chooseOptionClick);
 function chooseOptionClick(){
@@ -230,7 +234,20 @@ function chooseOptionClick(){
 	if(event.target.matches('.scroll')) scrollInto(event.target, event);
 	if(event.target.parentElement.matches('.spoiler')||
 		event.target.matches('.spoiler')) openSpoiler(event.target.closest('.spoiler'));
+	if(event.target.closest('.header__burger')) openBurger();
+	if(event.target.closest('.header__close')||
+		event.target.matches('.header__menu')) closeBurger();
 }
+
+function openBurger(){
+	body.classList.add('lock');
+	$('.header__menu').classList.add('active');
+}
+function closeBurger(){
+	body.classList.remove('lock');
+	$('.header__menu').classList.remove('active');
+}
+
 customInputActive();
 function customInputActive(){
 	$$('.custom-input input').forEach(item=>{
@@ -261,8 +278,27 @@ function closeSpoiler(el){
 	el.classList.remove('active');
 }
 
-window.addEventListener("resize", showMoreText);
-showMoreText();
+window.addEventListener("resize", chooseOptionResize);
+chooseOptionResize();
+function chooseOptionResize(){
+	let iWidth = window.innerWidth;
+	menuElementsReplace(iWidth);
+	showMoreText();
+}
+
+function menuElementsReplace(iWidth){
+	if(iWidth>991) {
+		block.prepend(room);
+		block.prepend(tel);
+		block.prepend(search);
+		closeBurger();
+	}
+	if(iWidth<991) {
+		$('.room').prepend(room);
+		block.after(tel);
+		$('.search').prepend(search);
+	}
+}
 function showMoreText(){
 	$$('.show-more').forEach(item=>{
 		if(item.scrollHeight> item.offsetHeight){
